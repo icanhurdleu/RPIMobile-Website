@@ -1,0 +1,295 @@
+
+/* Table of Content
+==================================================
+	#Import Fonts
+	#Reset & Basics
+  #Side Menu
+	#Banner Styling
+	#Button Styling
+	#Grid Layouts
+*/
+
+/* FONTS */
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900);
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,300,700,900);
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,300,700,900);
+
+/* #Reset & Basics
+================================================== */
+	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline; }
+	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+		display: block; }
+	body {
+		line-height: 1; }
+	ol, ul {
+		list-style: none; }
+	blockquote, q {
+		quotes: none; }
+	blockquote:before, blockquote:after,
+	q:before, q:after {
+		content: '';
+		content: none; }
+	table {
+		border-collapse: collapse;
+		border-spacing: 0; }
+
+   .btn {
+      display: inline-block;
+      padding: 6px 12px;
+      margin-bottom: 0;
+      font-size: 20px;
+      font-weight: normal;
+      line-height: 1.428571429;
+      text-align: center;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-image: none;
+      border: 1px solid transparent;
+      border-radius: 0px;
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+           -o-user-select: none;
+              user-select: none;
+    }
+    .btn:focus {
+      outline: thin dotted;
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px;
+    }
+    .btn:hover,
+    .btn:focus {
+      color: #333333;
+      text-decoration: none;
+    } 
+
+/* #Div Constructing
+================================================== */		
+
+.column-full {
+	position: relative;
+  	min-height: 1px;
+  	padding-right: 15px;
+  	padding-left: 15px;
+}
+
+@media (min-width: 1200px) {
+  .column-full {
+    float: left;
+  }
+  .column-full {
+    width: 100%;
+  }
+}
+
+/* #Side Menu
+================================================== */
+
+.menu-toggle {
+  position: fixed;
+  left: 5px;
+  top: 5px;
+  background-color: transparent;
+}
+.btn-side-menu {
+  background-color: transparent;
+  float: right;
+}
+.btn-side-menu:active {
+  border: none;
+}
+
+.left-push-menu {
+  background: transparent;
+  position: fixed;
+  width: 280px;
+  height: 100%;
+  top: 0;
+  z-index: 1000;
+  left: -240px;
+}
+.left-push-menu a {
+  display: block;
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: 300;
+}
+.left-push-menu.cbp-spmenu-open {
+  left: 0px;
+}
+.page-slide {
+  overflow-x: hidden;
+  position: relative;
+  left: 0;
+}
+.cbp-spmenu-push-toright {
+  left: 240px;
+}
+.cbp-spmenu-open {
+  background-color: #333;
+}
+.page-slide,
+.left-push-menu {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+/* #Banner Styling
+================================================== */
+
+.headerwrap {
+	background: url(../assets/images/banner.png) no-repeat center top;
+	margin-top: 0px;
+	padding-top:100px;
+	text-align:center;
+	background-attachment: relative;
+	background-position: center center;
+	min-height: 400px;
+	max-height: 500px;
+	width: 100%;
+	
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.header-text {
+	text-align: left;
+	padding-left: 100px;
+	width: 50%;
+	font-family: "Lato";
+}
+
+.header-text h1 {
+	line-height: 1;
+  	color: #222;
+  	font-size: 70px;
+}
+
+.header-text p {
+	line-height: 1;
+  	color: #fff;
+  	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  	font-size: 30px;
+  	padding-top: 20px;
+  	margin-bottom: 20px;
+}
+
+/* #Button Styling
+================================================== */
+
+.btn-default {
+  color: #231f20;
+  background-color: #ee2d24;
+  border-color: #231f20;
+}
+
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active,
+.open .dropdown-toggle.btn-default {
+  color: #231f20;
+  background-color: #be2015;
+  border-color: #231f20;
+}
+
+/* #Grid Layouts
+================================================== */
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container:before,
+.container:after {
+  display: table;
+  content: " ";
+}
+
+.container:after {
+  clear: both;
+}
+
+.container:before,
+.container:after {
+  display: table;
+  content: " ";
+}
+
+.container:after {
+  clear: both;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+.jumbotron {
+  padding: 30px;
+  margin-bottom: 30px;
+  font-size: 21px;
+  font-weight: 200;
+  line-height: 2.1428571435;
+  color: inherit;
+  background-color: #eeeeee;
+}
+
+.feature-content {
+  margin-top: 20px;
+}
+
+@media (min-width: 1200px) {
+    .feature-third {
+    float: left;
+  }
+    .feature-third {
+    width: 33.33333333333333%;
+  }
+}
+
+.feature-third {
+  text-align: center;
+}
+.feature-third > h3 {
+  font-family: "Raleway";
+  font-size: 20px;
+  margin-top: 10px;
+}
+.feature-third > p {
+  text-align: left;
+  font-family: "Raleway";
+  font-size: 14px;
+  margin-top: 10px;
+}
