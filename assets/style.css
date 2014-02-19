@@ -107,20 +107,38 @@
 }
 
 .left-push-menu {
-  background: transparent;
+  background: #333;
   position: fixed;
-  width: 280px;
+  width: 220px;
   height: 100%;
   top: 0;
   z-index: 1000;
-  left: -240px;
+  left: -200px;
 }
+
+.left-push-menu h3 {
+  color: #afdefa;
+  font-size: 1.9em;
+  font-family: "Raleway";
+  padding: 20px;
+  margin: 0;
+  font-weight: 300;
+  background: #333;
+}
+
 .left-push-menu a {
   display: block;
   color: #fff;
   font-size: 1.1em;
+  font-family: "Raleway";
   font-weight: 300;
+  padding: 1em;
+  text-decoration: none;
 }
+.left-push-menu a:hover {
+  background-color: #222;
+}
+
 .left-push-menu.cbp-spmenu-open {
   left: 0px;
 }
@@ -130,11 +148,13 @@
   left: 0;
 }
 .cbp-spmenu-push-toright {
-  left: 240px;
+  left: 200px;
 }
-.cbp-spmenu-open {
-  background-color: #333;
+.left-push-menu.cbp-spmenu-open h3 {
+  background: #0d77b6;
 }
+
+.left-push-menu h3,
 .page-slide,
 .left-push-menu {
   -webkit-transition: all 0.5s ease;

@@ -42,14 +42,13 @@
 	</div> -->
 
 	<nav class="left-push-menu" id="left-side-menu">
-		<button type="button" class="btn btn-side-menu" id="showLeftPush"><i class="fa fa-list"></i></button>
 			<h3>Menu</h3>
-			<a href="#">Celery seakale</a>
-			<a href="#">Dulse daikon</a>
-			<a href="#">Zucchini garlic</a>
-			<a href="#">Catsear azuki bean</a>
-			<a href="#">Dandelion bunya</a>
-			<a href="#">Rutabaga</a>
+			<a href="#"><i class="fa fa-cloud"></i> Celery seakale</a>
+			<a href="#"><i class="fa fa-bell"></i> Dulse daikon</a>
+			<a href="#"><i class="fa fa-cutlery"></i> Zucchini garlic</a>
+			<a href="#"><i class="fa fa-comment"></i> Catsear azuki bean</a>
+			<a href="#"><i class="fa fa-envelope"></i> Dandelion bunya</a>
+			<a href="#"><i class="fa fa-eraser"></i> Rutabaga</a>
 	</nav>
 
 	<div class="headerwrap">
@@ -84,20 +83,7 @@
 ================================================== -->
 <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script src="assets/classie.js"></script>
-
-		<script>
-			var menuLeft = document.getElementById( 'left-side-menu' ),
-				showLeftPush = document.getElementById( 'showLeftPush' ),
-				body = document.body;
-
-			showLeftPush.onclick = function() {
-				classie.toggle( this, 'active' );
-				classie.toggle( body, 'cbp-spmenu-push-toright' );
-				classie.toggle( menuLeft, 'cbp-spmenu-open' );
-			};
-
-		</script>
+<script src="assets/hoverout.js"></script>
 
 <!-- End Document
 ================================================== -->
