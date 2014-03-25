@@ -7,6 +7,9 @@
 	#Banner Styling
 	#Button Styling
 	#Grid Layouts
+  #Sections
+  #Lists
+  #Footer
 */
 
 /* FONTS */
@@ -92,51 +95,37 @@
 /* #Side Menu
 ================================================== */
 
-.menu-toggle {
-  position: fixed;
-  left: 5px;
-  top: 5px;
-  background-color: transparent;
+.halfCircleRight {
+     height: 50px;
+     width: 25px;
+     border-top-right-radius: 25px;
+     border-bottom-right-radius: 25px;
+     background: #333;
+     margin-left: 200px;
+     position: absolute;
+     top: 45%;
+     padding-left: 2px;
 }
-.btn-side-menu {
-  background-color: transparent;
-  float: right;
-}
-.btn-side-menu:active {
-  border: none;
+.halfCircleRight > i {
+  font-size: 18px;
+  color: #fff;
+  padding-top: 17px;
 }
 
 .left-push-menu {
-  background: #333;
+  background: transparent;
   position: fixed;
-  width: 220px;
   height: 100%;
   top: 0;
   z-index: 1000;
   left: -200px;
+  display: inline-block;
 }
-
-.left-push-menu h3 {
-  color: #afdefa;
-  font-size: 1.9em;
-  font-family: "Raleway";
-  padding: 20px;
-  margin: 0;
-  font-weight: 300;
-  background: #333;
-}
-
-.left-push-menu a {
-  display: block;
-  color: #fff;
-  font-size: 1.1em;
-  font-family: "Raleway";
-  font-weight: 300;
-  padding: 1em;
-  text-decoration: none;
-}
-.left-push-menu a:hover {
-  background-color: #222;
+.left-menu {
+  background-color: #333;
+  width: 200px;
+  height: 100%;
+  position: relative;
 }
 
 .left-push-menu.cbp-spmenu-open {
@@ -150,11 +139,7 @@
 .cbp-spmenu-push-toright {
   left: 200px;
 }
-.left-push-menu.cbp-spmenu-open h3 {
-  background: #0d77b6;
-}
 
-.left-push-menu h3,
 .page-slide,
 .left-push-menu {
   -webkit-transition: all 0.5s ease;
@@ -162,11 +147,37 @@
   transition: all 0.5s ease;
 }
 
+.cbp-spmenu h3 {
+  color: #fff;
+  font-size: 1.9em;
+  padding: 20px;
+  margin: 0;
+  font-weight: 300;
+  background: #B61C14;
+  font-family: "Lato";
+}
+
+.cbp-spmenu a {
+  display: block;
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: 300;
+  border-bottom: 1px solid #D5291F;
+  padding: 1em;
+  text-decoration: none;
+  font-family: "Lato";
+  font-weight: 300;
+}
+.cbp-spmenu a:hover {
+  background: #D5291F;
+}
+
 /* #Banner Styling
 ================================================== */
 
 .headerwrap {
-	background: url(../assets/images/banner.png) no-repeat center top;
+	/*background: url(../assets/images/RPIbuilding.jpg) no-repeat center top;*/
+  background-color: #B61C14;
 	margin-top: 0px;
 	padding-top:100px;
 	text-align:center;
@@ -189,43 +200,54 @@
 
 .header-text {
 	text-align: left;
-	padding-left: 100px;
-	width: 50%;
+	padding-left: 50px;
 	font-family: "Lato";
+  font-weight: 300;
 }
 
 .header-text h1 {
 	line-height: 1;
-  	color: #222;
-  	font-size: 70px;
+  color: #fff;
+  font-size: 120px;
+  text-align: center;
 }
 
 .header-text p {
 	line-height: 1;
   	color: #fff;
-  	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   	font-size: 30px;
   	padding-top: 20px;
-  	margin-bottom: 20px;
+}
+
+.btn-group {
+  margin-top: 50px;
+}
+.fa {
+  margin-right: 10px;
 }
 
 /* #Button Styling
 ================================================== */
 
-.btn-default {
-  color: #231f20;
-  background-color: #ee2d24;
-  border-color: #231f20;
+.btn-download {
+  color: #fff;
+  background-color: #B61C14;
+  border: 1px solid #fff;
+  font-family: "Lato";
+  font-weight: 300;
+  font-size: 25px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
-.btn-default:hover,
-.btn-default:focus,
-.btn-default:active,
-.btn-default.active,
-.open .dropdown-toggle.btn-default {
-  color: #231f20;
-  background-color: #be2015;
-  border-color: #231f20;
+.btn-download:hover,
+.btn-download:focus,
+.btn-download:active,
+.btn-download.active,
+.open .dropdown-toggle.btn-download {
+  color: #B61C14;
+  background-color: #fff;
+  border-color: #fff;
 }
 
 /* #Grid Layouts
@@ -286,30 +308,114 @@
   background-color: #eeeeee;
 }
 
-.feature-content {
+.column {
+  float: left;
+  margin-left: 5%;
+}
+
+.column:first-child {
+  margin-left: 0%;
+}
+
+.column.two-thirds {
+  width: 60%;
+}
+
+.column.one-third {
+  width: 35%;
+}
+
+/* #Sections
+================================================== */
+section {
+  min-height: 400px;
+  width: 80%;
+  margin-left: 50px;
   margin-top: 20px;
+  font-family: "Lato";
+  font-weight: 300;
+  color: #333 !important;
+}
+section > h1 {
+  font-size: 50px;
+  margin-bottom: 20px;  
+}
+section > p {
+  font-size: 25px;
 }
 
-@media (min-width: 1200px) {
-    .feature-third {
-    float: left;
-  }
-    .feature-third {
-    width: 33.33333333333333%;
-  }
+section > div > h1 {
+  font-size: 50px;
+  margin-bottom: 20px;  
+}
+section > div > p {
+  font-size: 25px;
+  line-height: 40px;
+  padding-bottom: 25px;
 }
 
-.feature-third {
+.bar {
+  background-color: #333;
+  height: 5px;
+  width: 100%;
+}
+.thinbar {
+  background-color: #333;
+  height: 2px;
+  width: 100%;
+}
+
+.60width {
+  width: 60%;
+}
+
+.40width {
+  width: 40%;
+}
+
+/* #Lists
+================================================== */
+
+.list {
+  font-family: "Lato";
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 50px;
+  color: #fff;
+  background-color: #333;
   text-align: center;
+  border-bottom: 1px solid #B61C14;
 }
-.feature-third > h3 {
-  font-family: "Raleway";
-  font-size: 20px;
-  margin-top: 10px;
+
+.list-last {
+  border-bottom: none;
 }
-.feature-third > p {
-  text-align: left;
-  font-family: "Raleway";
-  font-size: 14px;
-  margin-top: 10px;
+
+/* #Footer
+================================================== */
+
+.footerwrap {
+  background-color: #333;
+  margin-top: 0px;
+  padding-top:10px;
+  padding-left: 50px;
+  height: 200px;
+  width: 100%;
+  
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.footerwrap > h1 {
+  font-family: "Lato";
+  font-weight: 300;
+  color: #fff;
+  font-size: 25px;
 }
